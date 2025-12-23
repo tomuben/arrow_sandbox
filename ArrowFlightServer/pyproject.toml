@@ -1,0 +1,17 @@
+[project]
+name = "arrowflightserver"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Thomas Ubensee",email = "34603111+tomuben@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pyarrow (>=22.0.0, <23.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,17 @@
+module(name="apacheflightserver", version = "1.0")
+
+bazel_dep(name = "bazel_skylib", version = "1.7.1")
+bazel_dep(name = "googletest", version = "1.15.0")
+
+
+#arrow_local_repository = use_repo_rule("//:arrow_repository.bzl", "arrow_local_repository")
+#arrow_local_repository(name = "arrow")
+
+#flight_local_repository = use_repo_rule("//:flight_repository.bzl", "flight_local_repository")
+#flight_local_repository(name = "arrow_flight")
+
+python_local_repository = use_repo_rule("//:python_repository.bzl", "python_local_repository")
+python_local_repository(name = "python3", python_version="python3")
+
+arrow_local_repository = use_repo_rule("//:python_repository.bzl", "arrow_local_repository")
+arrow_local_repository(name = "pyarrow")
